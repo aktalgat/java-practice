@@ -25,6 +25,7 @@ public class Stream {
         System.out.println(collection.stream().skip(2).findFirst().get());
 
         System.out.println(collection.stream().skip(1).limit(2).collect(Collectors.toList()));
+        System.out.println(collection.stream().reduce((s1, s2) -> s1 + s2).orElse("Empty"));
 
     }
 }
