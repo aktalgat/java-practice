@@ -1,7 +1,9 @@
 package com.talgat;
 
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Stream {
@@ -27,5 +29,24 @@ public class Stream {
         System.out.println(collection.stream().skip(1).limit(2).collect(Collectors.toList()));
         System.out.println(collection.stream().reduce((s1, s2) -> s1 + s2).orElse("Empty"));
 
+        Map<String, Book> map = new LinkedHashMap<>();
+        map.put("101", new Book("Effective Java", "Bloch"));
+        map.put("99", new Book("Java for beginners", "Shildt"));
+        map.put("100", new Book("Network", "Tannenbaum"));
+
+        List<String> mapList = map.values().stream()
+                .filter((b) -> b.title.contains("Java")).map((b) -> b.title)
+                .collect(Collectors.toList());
+        mapList.forEach(System.out::println);
+    }
+}
+
+class Book {
+    String title;
+    String author;
+
+    Book(String title, String author) {
+        this.title = title;
+        this.author = author;
     }
 }
