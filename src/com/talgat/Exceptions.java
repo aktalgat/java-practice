@@ -12,6 +12,12 @@ public class Exceptions {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        try {
+            System.out.println("Just print");
+        } finally {
+            System.out.println("Just");
+        }
     }
 
     private static String readFirstLineFromFile(String path) throws IOException {
