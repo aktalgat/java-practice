@@ -1,4 +1,4 @@
-package com.talgat;
+package io.talgat;
 
 public class Generic {
     A<Integer> a = new A<>();

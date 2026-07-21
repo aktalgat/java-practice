@@ -1,4 +1,4 @@
-package com.talgat;
+package io.talgat;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

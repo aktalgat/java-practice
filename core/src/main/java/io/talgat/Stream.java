@@ -1,4 +1,4 @@
-package com.talgat;
+package io.talgat;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;

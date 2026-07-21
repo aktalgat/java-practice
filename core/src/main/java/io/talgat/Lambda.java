@@ -1,4 +1,4 @@
-package com.talgat;
+package io.talgat;
 
 public class Lambda {
     int True = 6;
